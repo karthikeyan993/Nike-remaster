@@ -1,0 +1,539 @@
+/* Colors */
+$color-primary: #e9e9e9;
+$color-secondary: #82f4d3;
+$color-primary-text: #9e9e9e;
+$color-secondary-text: #333333;
+$color-tertiary-text: #53cba5;
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin button-style {
+  background: $color-secondary;
+  border: none;
+  color: $color-secondary-text;
+  padding: 10px;
+}
+
+@mixin text-title {
+  font-size: 32px;
+  color: $color-secondary-text;
+  font-family: "sans-serif";
+}
+
+@mixin text-des {
+  font-size: 14px;
+  color: $color-primary-text;
+  line-height: 1.8;
+}
+
+@mixin hp-btn {
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  bottom: -8px;
+  left: 8px;
+}
+@mixin hp-btn-outer {
+  width: 100px;
+  height: 40px;
+  background: #fff;
+  border: 2px solid $color-secondary;
+}
+
+.homepage {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.hero-banner-wrapper {
+  @include flex-column;
+  position: relative;
+  width: 100%;
+  height: 550px;
+  background: linear-gradient(80deg, $color-primary 50%, $color-secondary 50%);
+}
+
+.hero-head-wrap {
+  height: 20%;
+  margin: 0 10%;
+}
+.hero-name-wrap {
+  height: 30%;
+  margin: 0 10%;
+}
+.hero-footer-wrap {
+  height: 50%;
+}
+.head-con {
+  @include flex-row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-con {
+  color: $color-secondary;
+  font-weight: 700;
+  span {
+    color: $color-secondary-text;
+  }
+}
+
+.head-name-con {
+  color: $color-secondary-text;
+}
+.hero-title-con {
+  font-size: 72px;
+  font-weight: 700;
+}
+
+.hero-btn-con {
+  position: relative;
+  margin: 10px 0 0 50px;
+}
+.hero-button {
+  width: 130px;
+  height: 40px;
+}
+.hero-shop-now {
+  font-weight: 700;
+  padding: 10px 5px !important;
+  @include button-style;
+  position: absolute;
+  top: -8px;
+  left: 8px;
+}
+.hero-shop-outer {
+  background: $color-primary;
+  border: 2px solid $color-secondary;
+}
+
+.hero-foot-text {
+  width: 200px;
+  font-size: 10px;
+  transform: rotate(-90deg);
+  color: $color-primary-text;
+  left: -30px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.hero-foot-social-con {
+  margin-right: 20px;
+}
+.hero-icon-li img {
+  width: 24px;
+  height: 24px;
+}
+
+.hero-icon-ul {
+  @include flex-column;
+  gap: 5px;
+}
+.hero-icon-li ion-icon {
+  font-size: 32px;
+}
+
+.hero-image {
+  display: block;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+/* Feature Block*/
+.featured-wrapper {
+  @include flex-row;
+  justify-content: space-evenly;
+  height: 500px;
+}
+
+.feature-img-con,
+.feature-text-con {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.feature-text-con {
+  position: relative;
+}
+.feature-img-con {
+  justify-content: flex-end;
+}
+.feature-img {
+  width: 450px;
+  height: 350px;
+  justify-content: center;
+  align-items: baseline;
+  display: flex;
+  padding: 20px;
+  border: 6px solid #fff;
+  background: $color-primary;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.feature-img img {
+  align-self: flex-end;
+  width: 100%;
+}
+
+.feature-text {
+  @include flex-column;
+  gap: 15px;
+  width: 75%;
+  position: absolute;
+  left: -6%;
+}
+
+.feat-title {
+  @include text-title;
+}
+
+.feat-des {
+  @include text-des;
+}
+.feat-btn-con {
+  position: relative;
+}
+.feat-btn-in {
+  @include button-style;
+  @include hp-btn;
+}
+.feat-btn-out {
+  @include hp-btn-outer;
+}
+.feat-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Popular shoes wrap */
+
+.popular-wrapper {
+  @include flex-column;
+  align-items: center;
+  gap: 30px;
+  height: 450px;
+}
+.pop-list {
+  @include flex-row;
+  gap: 20px;
+}
+.pop-items {
+  @include flex-column;
+  gap: 20px;
+}
+.pop-img-con {
+  width: 200px;
+  height: 250px;
+  background: $color-primary;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.pop-text-con {
+  @include flex-column;
+  gap: 10px;
+}
+.pop-text-name {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.pop-nike,
+.pop-shop {
+  font-size: 12px !important;
+}
+
+.pop-shop {
+  color: $color-primary-text;
+}
+.pop-price {
+  font-size: 18px;
+  color: $color-primary-text;
+}
+.pop-title {
+  width: 860px;
+  @include text-title;
+}
+
+/* Seasonal wrapper */
+.seasonal-wrapper {
+  @include flex-row;
+  height: 500px;
+}
+.seasonal-text-con {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.season-text {
+  @include flex-column;
+  gap: 15px;
+  width: 60%;
+}
+
+.season-des {
+  @include text-des;
+}
+
+.feat-btn-con.season {
+  left: -8px;
+}
+.season-img-con {
+  width: 50%;
+  display: block;
+}
+
+.season-img {
+  height: 360px;
+  width: 360px;
+  border: 2px solid #fff;
+  background: #fde6ec;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 2;
+}
+
+.season-img-bg {
+  width: 200px;
+  height: 300px;
+  background: linear-gradient(
+    to top,
+    rgba(158, 237, 215, 1),
+    rgba(158, 237, 215, 0.9)
+  );
+  position: relative;
+  top: 100px;
+  left: 250px;
+}
+
+.season-img-pos {
+  width: 400px;
+  display: flex;
+  height: 400px;
+  position: relative;
+  left: 100px;
+}
+
+/* Quotes wrapper*/
+
+.quote-wrapper {
+  @include flex-column;
+  background: #f8f8f8;
+  padding: 50px;
+}
+.quote-des-con {
+  @include flex-row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.quote-title {
+  @include text-title;
+  text-align: center;
+}
+
+.quote-text-des {
+  @include text-des;
+  width: 50%;
+}
+
+.quote-des-con img {
+  width: 100px;
+}
+
+.quote-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.quote-author-name {
+  font-size: 13px;
+  color: $color-secondary-text;
+}
+.quote-author-role {
+  font-size: 11px;
+  color: $color-tertiary-text;
+}
+
+/* Blog wrapper*/
+.blog-wrapper {
+  height: 600px;
+}
+.blog-wrapper .season-img img {
+  width: 100%;
+  height: -webkit-fill-available;
+  object-fit: fill;
+}
+
+.blog-wrapper .season-img-bg {
+  width: 230px;
+  position: relative;
+  height: 280px;
+  top: 200px;
+  background: linear-gradient(to left, #93f0d5, #caf8eb);
+  left: 275px;
+}
+
+.blog-nike {
+  font-size: 134px;
+  width: 280px;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: end;
+  transform: rotate(270deg);
+  transform-origin: right;
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: -72px;
+  right: 50px;
+  font-weight: 700;
+}
+
+.blog-title-con {
+  @include text-title;
+  text-align: center;
+}
+.blog-wrapper {
+  @include flex-column;
+  gap: 50px;
+  padding: 50px;
+}
+
+.blog-body-con {
+  @include flex-row;
+}
+
+.blog-pic-con,
+.blog-text-con {
+  width: 50%;
+}
+
+.blog-text-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.blog-text-des {
+  @include text-des;
+}
+.blog-text-con {
+  @include flex-column;
+  gap: 30px;
+}
+
+/* Footer */
+
+.footer-main {
+  @include flex-row;
+}
+
+.foot-col2,
+.foot-col3 {
+  @include text-des;
+  line-height: 1.2;
+}
+
+.foot-col1,
+.foot-col2,
+.foot-col3 {
+  width: 20%;
+}
+
+.foot-col4 {
+  width: 40%;
+}
+
+.foot-col1,
+.foot-col2,
+.foot-col3 {
+  display: flex;
+  justify-content: center;
+  line-height: 1.4;
+}
+
+.foot-col2,
+.foot-col3,
+.foot-col4 {
+  padding-top: 12px;
+}
+.foot-col1 .cart-con,
+.foot-col1 .cart-con span {
+  font-size: 24px;
+}
+
+.foot-col1 .cart-con ion-icon {
+  font-size: 32px;
+  position: relative;
+  top: 6px;
+}
+
+.foot-col4 {
+  color: $color-primary-text;
+  @include flex-column;
+  gap: 20px;
+}
+
+.foot-col4 input[type="text"] {
+  border: none;
+  width: 250px;
+  box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.08);
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.foot-col4 input:focus,
+.foot-col4 input::selection {
+  border: none !important;
+  outline-color: #fff;
+}
+
+.foot-col4 input[type="text"]::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+.sign-form {
+  @include flex-row;
+  gap: 20px;
+}
+
+.foot-col4 button {
+  padding: 10px 25px;
+  background: $color-secondary;
+  color: $color-secondary-text;
+  border: none;
+}
+
+.sign-soc-con {
+  @include flex-row;
+  gap: 16px;
+}
+
+.sign-soc-con img {
+  width: 16px;
+  height: 16px;
+}
